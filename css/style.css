@@ -1,0 +1,810 @@
+/* Global Rule */
+:root{
+--main-color--:rgb(14 118 146 / 62%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* End Global Rule */
+header{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+header .container{
+    min-height: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container::after{
+   content: "";
+    position: absolute;
+    width: 97%;
+    background: #fff;
+    height: 1px;
+    bottom: 0;
+}
+.logo img{
+    width: 150px;
+}
+header nav{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+nav .bar i{
+    color: #fff;
+    font-size: 25px;
+    padding-right: 15px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+@media(max-width:768px){
+    nav ul{
+        display: none;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    nav ul{
+        display: none;
+    }
+}
+nav ul li a{
+   text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 17px;
+    padding-bottom: 44px;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid #076c9a;
+    position: relative;
+    z-index: 1;
+}
+.form{
+    border-left: 2px solid #fff;
+    width: 40px;
+}
+.form i{
+    color: #fff;
+    padding-left: 15px;
+}
+.landing{
+    background-image: url(../image/landing.webp);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(39, 36, 36);
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    height:100%;
+}
+.left-right{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+    .left-right{
+        display: none;
+    }
+}
+.left-right :nth-child(2) i{
+    position: relative;
+    right: -613px;
+    top: 97px;
+    font-size: 43px;
+}
+.left-right :nth-child(1) i{
+    position: relative;
+    top: 130px;
+    font-size: 43px;
+    margin: -31px;
+}
+.landing .text{
+    transform: translateY(-50%);
+    color: #fff;
+    width: 50%;
+    top: 50%;
+    position: relative;
+    background-color:rgb(14 118 146 / 62%);
+    padding: 40px;
+}
+@media(max-width:768px){
+    .landing .text{
+        width: 100%;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    .landing .text{
+         width: 100%;
+    }
+}
+.title-one h2{
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.title-one p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.end{
+   position: relative;
+    top: 50%;
+    color: #fff;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,20px);
+}
+@media(min-width:350px){
+    .end{
+        top: 33% !important; 
+        left: -2%;
+    }
+}
+@media(max-width:768px){
+    .end{
+        top: 40%;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    .end{
+        top: 40%;
+    }
+}
+@media (min-width:1025px) and (max-width: 1200px){
+    .end{
+        top: 40%;
+    }
+}
+@media (min-width:1201px){
+    .end{
+        top: 40%;
+    }
+}
+
+.end :nth-child(2){
+    width: 16px;
+    position: relative;
+    background-color: var(--main-color--);
+    display: block;
+    height: 16px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    top: 2.2px;
+}
+/* Start services */
+.services{
+    width: 100%;
+}
+/* .services .title
+{
+    text-align: center;
+   
+} */
+.title{
+    padding: 50px;
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
+.title h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    width: 290px;
+    padding: 40px;
+    position: relative;
+}
+.title h1::after{
+    content: "o";
+    position: absolute;
+    top: 85px;
+    right:47%;
+    background-color: #fff;
+}
+.title h1::before{
+   content: "";
+    position: absolute;
+    top: 108px;
+    right: 32%;
+    width: 104px;
+    height: 2px;
+    background-color: #333;
+}
+/* @media(max-width:768px){
+    .title h1::before{
+        right: 38%;
+    }
+} */
+.p-title{
+    color: #aaaaaa;
+    text-align: center;
+}
+.services .content{
+   display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 100px;
+    padding-top: 0px;
+    gap: 25px;
+    margin: 42px;
+}
+@media(max-width:768px){
+    .services .content{
+         grid-template-columns: repeat(1,1fr);
+         margin: 0;
+    }
+}
+.content h3{
+    padding: 20px;
+    color: var(--main-color--);
+}
+.content span i{
+    position: relative;
+    left: -37px;
+    font-size: 35px;
+    top: 57px;
+    color: #333;
+}
+.content p{
+    padding: 20px;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+.contenttwo{
+    background-image: url(../image/headphone.webp);
+    width: 100%;
+    height: 50vh;
+}
+.filter{
+    background-color: rgb(0 0 0 / 72%);
+     width: 100%;
+    height: 50vh;
+
+}
+.contenttwo .filter img{
+    height: 304px;
+    margin-left: 170px;
+    margin-top: -209px;
+}
+@media(max-width:768px){
+    .contenttwo .filter img{
+         display: none;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+   .contenttwo .filter img{
+         display: none;
+    }
+}
+.design{
+    transform: translateY(-50%);
+    color: #fff;
+    width: 50%;
+    top: 50%;
+    padding: 25px;
+    left: 50%;
+    position: relative;
+    background-color:rgb(14 118 146 / 62%);
+}
+@media(max-width:768px){
+    .design{
+         width:auto;
+         left: 0;
+    }
+}
+.design h2{
+    margin: 24px;
+    margin-top: 0;
+    font-weight: normal;
+}
+.design div{
+    margin: 10px;
+    padding-left: 40px;
+}
+.design div i{
+    padding-right: 14px;
+    font-size: 20px;
+}
+/* End services */
+/*  Start About */
+.About{
+    width: 100%;
+    text-align: center;
+}
+.backgroun-about{
+    background-image: url(../image/headphone.webp);
+    width: 100%;
+    background-position: center;
+    margin-top: 100px;
+}
+@media(max-width:768px){
+    .backgroun-about{
+        height: auto;
+    }
+}
+.backgroun-about .filter{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    height: auto;
+   
+}
+@media(max-width:768px){
+    .backgroun-about .filter{
+        grid-template-columns: repeat(1,auto);
+        justify-content: center;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    .backgroun-about .filter{
+        grid-template-columns: repeat(2,auto);
+    }
+}
+.backgroun-about .filter div{
+    width: 250px;
+    height: 250px;
+    margin: 19px;
+    color: #fff;
+    padding-top: 75px;
+    font-size: 22px;
+}
+.backgroun-about .filter div:hover{
+ background: #fff;
+ color: #333;
+ transition:1s ;
+ -webkit-transition:1s ;
+ -moz-transition:1s ;
+ -ms-transition:1s ;
+ -o-transition:1s ;
+}
+/* End About  */
+/* Start Skill  */
+.skil{
+    display: flex;
+    gap: 35px;
+    text-align: center;
+    padding: 100px;
+    padding-top: 20px;
+
+}
+@media(max-width:768px){
+    .skil{
+        padding: 50px 0 0 0;
+        flex-direction: column;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    .skil{
+        padding: 50px 0 0 0;
+        flex-direction: column;
+    }
+}
+.skil h4{
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.skil p{
+    margin-bottom: 46px;
+    padding-left: 100px;
+}
+.TESTIMONIALS div{
+    margin: 50px;
+    padding-left: 101px;
+    letter-spacing: 1px;
+}
+@media(max-width:768px){
+    .TESTIMONIALS div,
+    .skil p{
+        padding-left: 0;
+    }
+}
+.TESTIMONIALS hr
+{
+    margin-left: 130px;
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .TESTIMONIALS div,
+    .skil p{
+        padding-left: 0;
+    }
+}
+@media(max-width:768px){
+    .TESTIMONIALS hr{
+       margin-left: 0px;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .TESTIMONIALS hr{
+       margin-left: 0px;
+    }
+}
+.skill-one ul{
+    list-style: none;
+    margin-top: -19px;
+    margin-left: 6px;
+}
+
+.skill-one li{
+    display: grid;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    padding-top: 24px;
+}
+.skill-one ul div{
+    position: relative;
+    height: 24px;
+    padding-top: 10px;
+    background: #24c0f2;
+    border-right: 89px solid #aaa;
+}
+.skill-one ul :nth-child(2)::after
+,.skill-one ul :nth-child(4)::after
+,.skill-one ul :nth-child(6)::after
+,.skill-one ul :nth-child(8)::after{
+    content: "";
+    position: absolute;
+    padding: -2px;
+    border-top: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-top: -21px;
+    right: -6px;
+}
+.skill-one ul :nth-child(2)::before
+,.skill-one ul :nth-child(4)::before
+,.skill-one ul :nth-child(6)::before
+,.skill-one ul :nth-child(8)::before{
+    content: "90";
+    color: white;
+    position: absolute;
+    margin-top: -16px;
+    right: -14px;
+    width: 17px;
+    background: black;
+    padding: 8px;
+    top: -32px;
+}
+
+.background-skill{
+    background-image: url(../image/headphone.webp);
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    margin-top: 100px;
+   margin-bottom: 100px;
+}
+
+.background-skill .filter{
+    padding: 90px;
+}
+.background-skill .filter p{
+    color: #fff;
+    text-align: center;
+}
+.background-skill .filter :nth-child(1){
+    font-size: 25px;
+}
+.background-skill .filter :nth-child(2){
+    padding: 26px;
+    font-size: 20px;
+}
+/* End Skill  */
+/* Start pricing */
+.pricing{
+    width: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.content-price{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    padding: 50px 50px 50px 50px;
+}
+@media(max-width:768px){
+    .content-price{
+    grid-template-columns: repeat(1,auto);
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .content-price{
+    grid-template-columns: repeat(2,auto);
+    }
+}
+.content-price div{
+    background: #fafafa;
+    margin: 25px;
+}
+.content-price div h4{
+    font-weight: normal;
+    width: 100%;
+    padding: 35px;
+    font-size: 22px;
+    border-top: 1px solid var(--main-color--);
+}
+.content-price div :nth-child(2){
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 0;
+    margin-left: 0px;
+}
+.content-price div :nth-child(2) sup,
+.content-price div :nth-child(2) span{
+    font-weight: normal;
+    padding: 8px;
+    font-size: 22px;
+}
+.content-price div :nth-child(6){
+    width: 100%;
+    margin-left: 0;
+}
+.content-price div p{
+    border-bottom: 1px solid var(--main-color--);
+    padding: 17px;
+    margin-left: 45px;
+    width: 72%;
+}
+.content-price div a{
+    display: block;
+    margin: 19px;
+    text-decoration: none;
+    border: 1px solid var(--main-color--);
+    padding: 18px;
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 25%;
+}
+/* Contact us */
+.contact-us{
+    padding-bottom: 100px;
+}
+.contact-us p{
+   font-size: 25px;
+    margin: 10px;
+    padding-top: 0;
+    padding: 22px;
+    padding-top: 0;
+}
+.contact-us a{
+    text-decoration: none;
+    background-color: var(--main-color--);
+    color: #fff;
+    margin: 15px;
+    padding: 18px;
+    font-size: 18px;
+} 
+/* End Contact us */
+.pricing .filter{
+    display: grid;
+    padding-top: 150px;
+    grid-template-columns: repeat(2,auto);
+    color: white;
+}
+@media(max-width:768px){
+    .pricing .filter{
+    grid-template-columns: repeat(1,auto);
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .pricing .filter{
+    grid-template-columns: repeat(1,auto);
+    }
+}
+@media (min-width:1025px) and (max-width: 1200px){
+     .pricing .filter{
+    grid-template-columns: repeat(1,1000px);
+    }
+}
+.filter .input{
+    display: flex;
+    height: 47px;
+    justify-content: space-between;
+    border: 1px solid;
+    margin-left: 10%;
+}
+@media(max-width:768px){
+    .filter .input{
+        margin-left: 0;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px){
+    .filter .input{
+        width: 72%;
+    }
+}
+.filter input{
+    background-color: transparent;
+    border: none;
+    width: 300px;
+    height: 35px;
+    outline: none;
+}
+@media(max-width:768px){
+    .filter input 
+    {
+      width: 267px;
+    }
+}
+ .filter input::placeholder{
+    color: #fff;
+    padding-left: 5%;
+}
+.pricing .filter a{
+    color: #fff;
+    text-decoration: none;
+    background: var(--main-color--);
+    padding: 11px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* End pricing */
+/* Start Form */
+.contact .title{
+    text-align: center;
+}
+.contact form{
+    display: grid;
+    padding-left: 50px;
+    grid-template-columns: repeat(1,330px);
+    justify-content: center;
+}
+@media(max-width:768px){
+    .contact form
+        {
+        grid: none;
+        padding-left: 0;
+        }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .contact form
+        {
+        grid: none;
+        padding-left: 0;
+        }
+}
+form input{
+    width:700px;
+    padding: 10px;
+    margin-left: -27%;
+    margin-top: 9%;
+    margin-bottom: 3%;
+    outline: none;
+}
+
+form textarea{
+    margin-left: -27%;
+    margin-top: 8%;
+    margin-bottom: 3%;
+    width: 700px;
+    height: 165px;
+    outline: none;
+}
+.submit{
+    width: 50%;
+    color: #fff;
+    border: none;
+    background-color:#19c8fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+@media(max-width:768px){
+    form input,
+    form textarea,
+    .submit
+        {
+        margin-left: 0;
+        width: 100%;
+        }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     form input,
+    form textarea,
+    .submit
+        {
+        margin-left: 0;
+        width: 100%;
+        }
+}
+.container-contact{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,600px);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+@media(max-width:768px){
+    .container-contact
+        {
+        grid: none;
+        }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .container-contact
+        {
+        grid: none;
+        }
+}
+.left-contact{
+    display: grid;
+    margin-top: 50px;
+    justify-content: center;
+}
+@media(max-width:768px){
+   .left-contact
+        {
+        margin-top: 0;
+        grid: none;
+        text-align: center;
+        }
+}
+@media (min-width:769px) and (max-width: 1024px){
+     .left-contact
+        {
+        margin-top: 0;
+        grid: none;
+        text-align: center;
+        }
+}
+.left-contact div :nth-child(1){
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+.left-contact div p{
+ margin: 9px;
+}
+/* End Form */
+/* Star Footer */
+footer{
+    background-image: url(../image/headphone.webp);
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+footer img{
+width: 150px;
+}
+footer .footer-content{
+    display: grid;
+    justify-content: center;
+}
+footer .filter div:nth-child(2){
+   padding-bottom: 20px;
+    font-size: 20px;
+    width: 200px;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+footer .filter i{
+    padding: 10px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+/* End Footer */
+
+
